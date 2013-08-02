@@ -1,0 +1,8 @@
+@(userForm: Form[User])
+
+@helper.form(action = routes.UserController.submitAdd) {
+    @helper.inputText(userForm("name"))
+    @helper.inputText(userForm("email"))
+    @helper.inputDate(userForm("dateOfBirth"))
+    <input type="submit" value="Submit"/>
+}
